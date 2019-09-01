@@ -79,7 +79,7 @@ if test -z "$nid" && test -z "$sc"
       RUN_N=false
       cmd_sunny='exit\n'
       RUN_SH=true
-      cmd_sakura_http='./Sakura --su='${su}' --sp='${sp}' --sid='${sid}'/'${sc}'\n'
+      cmd_sakura_http='./Sakura --su='${su}' --sp='${sp}' --sid='${sid}'/'${sch}'\n'
     fi
     if test -z "$scr"
     then
