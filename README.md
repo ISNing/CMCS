@@ -1,7 +1,12 @@
 # Cloud Mincraft Server
-CMCS 分支-自定义域名
 
 通过Cloud Studio实现的**便捷的**，~~白恰的~~Minecraft Server.
+
+> 默认：https://cmcs.sf2005.ml
+
+> Github: https://github.com/SF2005/CMCS
+
+> 腾讯开发者平台: https://dev.tencent.com/u/SF2005/p/CMCS/git
 
 ###部署方案
 
@@ -13,7 +18,7 @@ CMCS 分支-自定义域名
 > Freeeeeeeeeeeeeeeeeeeeeeeeeeeeee!
 >>>>>>>>>>>Tencent YES!!!!
 
-所以，我们可以通过一些手法将它变成一台服务器，作为一台免费的Mine craft服务器。
+所以，我们可以通过一些手法将它变成一台服务器，作为一台免费的Minecraft服务器。
 
 ## 安装
 ### 准备
@@ -117,6 +122,12 @@ Sunny Ngrok log:`sunny.log`
 >注意，平台是有内存限制的(大概)，最高可使用2G，也就是2048M。
 
 ## 发布历史
+
+### 1.1.02 - 2019.9.1
+重大错误修复。
+
+### 仓库已重置 - 2019.9.1
+清理包含过大文件的历史Commits，以便推送至Github.
 
 ### 1.1.01 - 2019.8.29
 经测试可以使用./Start.sh一键启动(Powered by screen)。
