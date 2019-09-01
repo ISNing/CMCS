@@ -1,0 +1,27 @@
+{
+    "__filename__": "./server/Java_Mohist.json",
+    "name": "Java_Mohist",
+    "createDate": "1/1/2000, 12:00:00 PM",
+    "lastDate": "1/1/2000, 12:00:00 PM",
+    "timeLimitDate": "",
+    "ie": "UTF-8",
+    "oe": "UTF-8",
+    "autoRestart": false,
+    "schedule": [],
+    "dockerConfig": {
+        "dockerCommand": "docker run -i ${xmx} -v ${serverpath}:/mcsd/ ${ports} ${imagename} ${commande}",
+        "dockerImageName": "mcsd",
+        "dockerXmx": "",
+        "dockerPorts": "",
+        "isDocker": false
+    },
+    "addCmd": [
+        ""
+    ],
+    "java": "java",
+    "jarName": "Server.jar",
+    "Xmx": "",
+    "Xms": "",
+    "cwd": "/home/coding/workspace/Java-Mohist",
+    "highCommande": ""
+}

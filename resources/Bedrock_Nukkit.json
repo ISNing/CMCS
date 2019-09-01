@@ -1,0 +1,27 @@
+{
+    "__filename__": "./server/Bedrock_Nukkit.json",
+    "name": "Bedrock_Nukkit",
+    "createDate": "1/1/2000, 0:00:00 AM",
+    "lastDate": "1/1/2000, 0:00:00 AM",
+    "timeLimitDate": "",
+    "ie": "UTF-8",
+    "oe": "UTF-8",
+    "autoRestart": false,
+    "schedule": [],
+    "dockerConfig": {
+        "dockerCommand": "docker run -i ${xmx} -v ${serverpath}:/mcsd/ ${ports} ${imagename} ${commande}",
+        "dockerImageName": "mcsd",
+        "dockerXmx": "",
+        "dockerPorts": "",
+        "isDocker": false
+    },
+    "addCmd": [
+        ""
+    ],
+    "java": "java",
+    "jarName": "Server.jar",
+    "Xmx": "",
+    "Xms": "",
+    "cwd": "/home/coding/workspace/Bedrock-Nukkit",
+    "highCommande": ""
+}
