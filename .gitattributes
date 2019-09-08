@@ -1,0 +1,1 @@
+/Bedrock-MBDS/bedrock_server filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,29 @@
+{
+    "__filename__": "./server/Bedrock_MBDS.json",
+    "name": "Bedrock_MBDS",
+    "createDate": "1/1/2000, 0:00:00 AM",
+    "lastDate": "1/1/2000, 0:00:00 AM",
+    "timeLimitDate": "",
+    "ie": "UTF-8",
+    "oe": "UTF-8",
+    "autoRestart": false,
+    "schedule": [],
+    "dockerConfig": {
+        "dockerCommand": "docker run -i ${xmx} -v ${serverpath}:/mcsd/ ${ports} ${imagename} ${commande}",
+        "dockerImageName": "mcsd",
+        "dockerXmx": "",
+        "dockerPorts": "",
+        "isDocker": false
+    },
+    "addCmd": [
+        ""
+    ],
+    "java": "java",
+    "jarName": "bedrock_server",
+    "Xmx": "",
+    "Xms": "",
+    "cwd": "/home/coding/workspace/Bedrock-MBDS",
+    "highCommande": "LD_LIBRARY_PATH=. ./bedrock_server",
+    "run": false,
+    "serverName": "Bedrock_MBDS"
+}

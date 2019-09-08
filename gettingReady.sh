@@ -1,4 +1,5 @@
 #!/bin/sh
+. ./TurnL.sh
 
 stty sane
 
@@ -7,7 +8,9 @@ echo
 echo "                            自动环境准备脚本"
 echo "                                                         By SF2005"
 echo ------------------------------------------------------------------------------
-
+echo "\33[41m注意：\33[0m\33[31m询问\"继续 [yN]  详细信息[d]\"请输入y.\33[0m"
+echo "\33[31m询问\"dpkg (Y/I/N/O/D/Z) [默认选项=N]\"请直接回车\33[0m"
+echo "\33[31m显示\"=== Command terminated normally (Xxx Xxx  XX XX:XX:XX XXXX) ===\"时请按x\33[0m"
 get_char()
 {
     SAVEDSTTY=`stty -g`
@@ -18,27 +21,39 @@ get_char()
     stty echo
     stty $SAVEDSTTY
 }
-echo
-echo "                                                                 P.S.注意选择Nukkit语言"
-
+echo 
 echo "请按任意键继续安装..."
 echo "按 CTRL+C 退出."
-
 
 char=`get_char`
 
 printf "\033c"
 
+#MBDS依赖解决-更新LTS
+sudo apt upgrade
+sudo apt install -y update-manager-core
+sudo screen -wipe
+sudo do-release-upgrade
+cd ~/workspace
+
+wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.12.1.1.zip
+sudo apt install unzip
+unzip bedrock-server-1.12.1.1.zip
+mv bedrock-server-1.12.1.1 Bedrock-MBDS
 cd Java-Mohist 
 #./Start.sh
-cd ../Bedrock-Nukkit
+cd ../Bedrock-MBDS
 #./Start.sh
 cd ../ && git clone https://github.com/Suwings/MCSManager.git
 sudo apt update
+sudo apt -y install openjdk-8-jre
 sudo apt -y install npm
 sudo npm install -g n
 sudo n stable
-sudo apt -y install screen
+sudo apt -y install screen wget
+
+#RDP
+
 #sudo apt install -y xrdp
 #sudo apt install -y vnc4server
 #sudo apt install -y xfce4

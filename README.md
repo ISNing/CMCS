@@ -1,6 +1,6 @@
 # Cloud Mincraft Server
 
-通过Cloud Studio实现的**便捷的**，~~白恰的~~Minecraft Server.
+**便捷的**，~~白恰的~~Minecraft Server.
 
 > 默认：https://cmcs.sf2005.ml
 
@@ -35,14 +35,19 @@
 - 2. 登录/注册账号
 - 3. 选择新建工作空间
 - 4. 输入项目名，选择从模板创建
-- 5. 选择 Java Demo 模板
+- 5. 选择 Blank 模板
 - 6. 点击创建
 - 7. 进入刚才创建的项目/工作空间
-- 8. 在终端中输入`rm -rf *`并回车,再次输入`rm -rf .*`
-- 9. 再次在终端输入`git clone -b --depth=1 https://git.dev.tencent.com/SF2005/CMCS.git .`(不要落下后面的.)
+- 8. 在终端依次输入以下命令并回车
+
+`rm -rf *`
+
+`rm -rf .*`
+
+`git clone -b master --depth=1 https://git.dev.tencent.com/SF2005/CMCS.git .`(不要落下后面的.)
 - 10. 等待完成操作，在下方终端中输入`./gettingReady.sh`并回车，按提示进行
 - 11. 自行检查是否报错并寻找解决方法(正常不会)
-- 12. 打开左侧文件树中`CMCS.config`，按照提示与之前准备~~下锅(停不下来))~~的页面信息填入。
+- 12. 打开左侧文件树中`CMCS.config`，按照提示与之前准备~~下锅(停不下来))~~的页面信息填入。带*项为必填项。建议填写`sc`与`sc1`项。
 >注意：sid填写请在Sakura Frp 服务器地址处查看，服务器与ID对应如下
 
 ID|域名
@@ -88,11 +93,8 @@ ID|域名
 
 ### Logs
 - 请利用log自行查错，善用搜索
-Java 服务器log:`Java-Mohist/logs`
-Bedrock 服务器log:`Bedrock-Nukkit/logs`
-Sakura Frp log:`sakura.log`
-Sunny Ngrok log:`sunny.log`
-
+服务器log:`见网页面板`
+Skura Frp,Ngrok,MCSM log:`见screen`
 
 ~~[帮助文档](WIKI)~~ ~~(木有~~~~~~)~~
 
@@ -101,12 +103,14 @@ Sunny Ngrok log:`sunny.log`
 
 >[Mohist](https://github.com/PFCraft/Mohist) ······························作为Java服务端
 
->[Nukkit](https://github.com/NukkitX/Nukkit) ······························ 作为Bedrock服务端
+>[Minecraft Bedrock Dedicated Server](https://www.minecraft.net/zh-hans/download/server/bedrock/) ······························ 作为Bedrock服务端
+
+>[Nukkit](https://github.com/NukkitX/Nukkit) ······························ 作为Bedrock服务端(已弃用)
 
 >[MCSManager](https://github.com/Suwings/MCSManager) ······························ 作为Minecraft 服务器面版
 
 >[Sakura Frp](https://natfrp.com)
-······························ 进行内网穿透(TCP 服务器穿透)
+······························ 进行内网穿透(TCP,UDP 服务器穿透)
 
 >[Sunny Ngrok](http://ngrok.cc)
 ······························ 进行内网穿透(HTTP 远程面板穿透)
@@ -121,26 +125,35 @@ Sunny Ngrok log:`sunny.log`
 >注意，平台是有内存限制的(大概)，最高可使用2G，也就是2048M。
 
 ## 发布历史
+### Mohist - Minecraft Bedrock Dedicated Server 核心版本
+#### 1.2.1 - 2019.10.3
+通过更新Ubuntu至最新LTS解决MBDS依赖问题。
+Readme 完善。
+gettingReady.sh 脚本完善。
 
-### 1.1.02 - 2019.9.1
+#### 1.2.0 - 2019.9.8
+已弃用Nukkit核心，转投Minecraft Bedrock Dedicated Server。
+
+### Mohist - Nukkit 核心版本
+#### 1.1.2 - 2019.9.1
 重大错误修复。
 
-### 仓库已重置 - 2019.9.1
+#### 仓库已重置 - 2019.9.1
 清理包含过大文件的历史Commits，以便推送至Github.
 
-### 1.1.01 - 2019.8.29
+#### 1.1.01 - 2019.8.29
 经测试可以使用./Start.sh一键启动(Powered by screen)。
 
-### v1.0.10
+#### v1.0.10
 经测试可以使用。
 
-### v1.0.01
+#### v1.0.01
 Readme完善。
 
-### v1.0.0
+#### v1.0.0
 嘿！~~~~ ~~白嫖~~成功！
 Readme完善。
 安装方法简化。
 
-### v0.0.01
+#### v0.0.01
 - 第一次同步，使用繁琐。
