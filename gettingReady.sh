@@ -39,8 +39,7 @@ cd ~/workspace
 
 wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.12.1.1.zip
 sudo apt install unzip
-unzip bedrock-server-1.12.1.1.zip
-mv bedrock-server-1.12.1.1 Bedrock-MBDS
+unzip bedrock-server-1.12.1.1.zip -d  Bedrock-MBDS
 cd Java-Mohist 
 #./Start.sh
 cd ../Bedrock-MBDS
