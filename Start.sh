@@ -89,7 +89,7 @@ if test -z "$nid" && test -z "$sc"
       cmd_sakura_remote='exit\n'
     else
       RUN_SR=true
-      cmd_sakura_remote='sudo service xrdp restart;vnc4server :0&&DISPLAY=127.0.0.1:0 xfce4-session & ;nohup DISPLAY=127.0.0.1:0 firefox $website >/dev/null 2>&1 &;./Sakura --su='${su}' --sp='${sp}' --sid='${sid}'/'${scr}'\n'
+      cmd_sakura_remote='sudo service xrdp restart;vnc4server :0&&DISPLAY=127.0.0.1:0 xfce4-session & ;DISPLAY=127.0.0.1:0 firefox '${website}'& ;./Sakura --su='${su}' --sp='${sp}' --sid='${sid}'/'${scr}'\n'
     fi
   fi
   fi
