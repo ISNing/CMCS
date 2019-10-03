@@ -30,7 +30,8 @@ char=`get_char`
 printf "\033c"
 
 #MBDS依赖解决-更新LTS
-sudo apt upgrade
+sudo apt update
+sudo apt upgrade -y
 sudo apt install -y update-manager-core
 sudo screen -wipe
 sudo do-release-upgrade
@@ -45,7 +46,6 @@ cd Java-Mohist
 cd ../Bedrock-MBDS
 #./Start.sh
 cd ../ && git clone https://github.com/Suwings/MCSManager.git
-sudo apt update
 sudo apt -y install openjdk-8-jre
 sudo apt -y install npm
 sudo npm install -g n
