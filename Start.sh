@@ -17,6 +17,7 @@ then
   echo su: $su
   echo sp: $sp
   echo sid: $sid
+  echo sidh: $sidh
   echo SN_MCSM: $SN_MCSM
   echo SN_N: $SN_N
   echo SN_S: $SN_S
@@ -38,6 +39,7 @@ if test -z "$nid" && test -z "$sc"
     echo su: $su
     echo sp: $sp
     echo sid: $sid
+    echo sidh: $sidh
     echo nid: $nid
     echo SN_MCSM: $SN_MCSM
     echo SN_N: $SN_N
@@ -56,7 +58,7 @@ if test -z "$nid" && test -z "$sc"
   cmd_MCSM='sudo LD_LIBRARY_PATH=. npm start\n'
   if test -z "$sc" | test -z "$sc1"
   then
-    echo "Attention! You Haven't sat $sc or $sc1.Please check file:CMCS.config."
+    echo "Attention! You Haven't set $sc or $sc1.Please check file:CMCS.config."
     cmd_sakura='./Sakura --su='${su}' --sp='${sp}' --sid='${sid}'\n'
     RUN_S1=false
     cmd_sakura1='exit\n'
@@ -70,7 +72,7 @@ if test -z "$nid" && test -z "$sc"
     cmd_sakura1='./Sakura --su='${su}' --sp='${sp}' --sid='${sid}'/'${sc1}'\n'
     if test -z "$sch"
     then
-      echo "Attention! You Haven't sat $sch.If you want to use your own domin,please check CMCS.config."
+      echo "Attention! You Haven't set $sch.If you want to use your own domin,please check CMCS.config."
       RUN_SH=false
       cmd_sakura_http='exit\n'
       RUN_N=true
@@ -79,7 +81,7 @@ if test -z "$nid" && test -z "$sc"
       RUN_N=false
       cmd_sunny='exit\n'
       RUN_SH=true
-      cmd_sakura_http='./Sakura --su='${su}' --sp='${sp}' --sid='${sid}'/'${sch}'\n'
+      cmd_sakura_http='./Sakura --su='${su}' --sp='${sp}' --sid='${sidh}'/'${sch}'\n'
     fi
     if test -z "$scr"
     then
@@ -97,7 +99,7 @@ echo "####################################################"
 echo "#                                                  #"
 echo "#  Minecraft Server(Mohist[PC]+Nukkit[PE])Starter  #"
 echo "#                                                  #"
-echo "#             Website:                             #"
+echo "#             Website:https://blog.sf2005.ml       #"
 echo "#                  QQ Group Number:                #"
 echo "#                                Made By SF2005    #"
 echo "####################################################"
@@ -112,7 +114,7 @@ then
   screen -x -S $SN_MCSM -p 0 -X stuff "$cmd_MCSM"
   echo MCSManager[Panel] Started.
 else
-  #echo "Var \$RUN_MCSM is not true.We will no start MCSManager."
+  #echo "Var \$RUN_MCSM is not true.We won't start MCSManager."
   sleep 0.01
 fi
 
@@ -125,7 +127,7 @@ then
   screen -x -S $SN_N -p 0 -X stuff "$cmd_sunny"
   echo Sunny Ngrok[HTTP] Started.
 else
-  #echo "Var \$RUN_N is not true.We will not start Sunny Ngrok."
+  #echo "Var \$RUN_N is not true.We won't start Sunny Ngrok."
   sleep 0.01
 fi
 
@@ -137,7 +139,7 @@ then
   screen -x -S $SN_S -p 0 -X stuff "$cmd_sakura"
   echo Sakura Frp Started.
 else
-  #echo "Var \$RUN_S is not true.We will not start Sakura Frp."
+  #echo "Var \$RUN_S is not true.We won't start Sakura Frp."
   sleep 0.01
 fi
 
@@ -149,7 +151,7 @@ then
   screen -x -S $SN_S1 -p 0 -X stuff "$cmd_sakura1"
   echo Sakura Frp-1 Started.
 else
-  #echo "Var \$RUN_S1 is not true.We will not start Sakura Frp-1."
+  #echo "Var \$RUN_S1 is not true.We won't start Sakura Frp-1."
   sleep 0.01
 fi
 
@@ -161,7 +163,7 @@ then
   screen -x -S $SN_SH -p 0 -X stuff "$cmd_sakura_http"
   echo Sakura Frp-HTTP Started.
 else
-  #echo "Var \$RUN_SH is not true.We will not start Sakura Frp-HTTP."
+  #echo "Var \$RUN_SH is not true.We won't start Sakura Frp-HTTP."
   sleep 0.01
 fi
 
@@ -173,7 +175,7 @@ then
   screen -x -S $SN_SR -p 0 -X stuff "$cmd_sakura_remote"
   echo Sakura Frp-RDP Started.
 else
-  #echo "Var \$RUN_SR is not true.We will not start Sakura Frp-RDP."
+  #echo "Var \$RUN_SR is not true.We won't start Sakura Frp-RDP."
   sleep 0.01
 fi
 
