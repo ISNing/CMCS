@@ -32,7 +32,7 @@ printf "\033c"
 #MBDS依赖解决-更新LTS
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y update-manager-core
+sudo apt install -y screen update-manager-core
 sudo screen -wipe
 sudo do-release-upgrade
 cd ~/workspace
@@ -49,7 +49,7 @@ sudo apt -y install openjdk-8-jre
 sudo apt -y install npm
 sudo npm install -g n
 sudo n stable
-sudo apt -y install screen wget
+sudo apt -y install wget
 
 #RDP
 
