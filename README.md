@@ -44,7 +44,17 @@
 
 `rm -rf .*`
 
-`git clone -b master --depth=1 https://git.dev.tencent.com/SF2005/CMCS.git .`(不要落下后面的.)
+`git clone -b [分支] --depth=1 https://git.dev.tencent.com/SF2005/CMCS.git .`(不要落下后面的.)
+分支|Java服务端|Bedrock服务端|备注
+:-:|:-:|:-:|:-:
+master|Mohist|Mincraft Bedrock Dedicated Server|主分支
+Stone-Included|Mohist|Stone Server|未完成/目标分支
+MBDS-Included|Mohist|Minecraft Bedrock Dedicated Server|仅修补
+Nukkit-Included|Mohist|Nukkit|仅修补
+MBDSsupport-compile|Mohist|Minecraft Bedrock Dedicated Server|已弃用 尝试编译实现MBDS
+master_obsolete|Mohist|Nukkit|已弃用
+coding-pages|无|无|pages静态服务 域名302跳转
+guthub-pages|无|无|pages静态服务 域名302跳转
 - 10. 等待完成操作，在下方终端中输入`./gettingReady.sh`并回车，按提示进行
 - 11. 自行检查是否报错并寻找解决方法(正常不会)
 - 12. 打开左侧文件树中`CMCS.config`，按照提示与之前准备~~下锅(停不下来))~~的页面信息填入。带*项为必填项。建议填写`sc`与`sc1`项。
