@@ -3,9 +3,6 @@
 
 ### Master Branch.
 
-#### 这里什么也没有。
-#### Notings here.
-
 **便捷的**，~~白恰的~~Minecraft Server.
 
 > 默认：https://cmcs.sf2005.ml
