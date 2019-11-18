@@ -31,7 +31,7 @@ then
   echo website: $website
   return 1
 else
-if test -z "$nid" && test -z "$sc" 
+if test -z "$nid" && test -z "$sc"
   then
     echo "\33[31mERROR!!ERROR!!ERROR!!ERROR!!ERROR!!ERROR!!ERROR!!ERROR!!ERROR!!ERROR\33[0m"
     echo "\33[41mErr:1 Configuration files are not set properly!\33[0m"
